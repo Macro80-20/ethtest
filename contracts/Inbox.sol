@@ -1,22 +1,14 @@
-// SPDX-License-Identifier: GPL-3.0
-pragma solidity ^0.4.17;
-
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.9;
+ 
 contract Inbox {
     string public message;
-    // A storage variable is one that will 
-    // automatically be stored with the contract on the blockchain
-    // so if we change the value of the message
-    // the value will be stored for eternity on the blockchain 
-
-    function Inbox(string initialMessage) public {
+    
+    constructor(string memory initialMessage) {
         message = initialMessage;
     }
-
-    function setMessage(string newMessage) public {
-        message = newMessage;
-    }
     
-    function getMessage() public view returns (string) { 
-     return message;
+    function setMessage(string memory newMessage) public {
+        message = newMessage;
     }
 }
