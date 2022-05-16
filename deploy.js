@@ -5,7 +5,7 @@ const Web3 = require('Web3')
 const {interface, bytecode} = require('./compile')
 
 // The purpose of this module right here is to both connect to some target network and unlock an account
-// for use on that network.
+// for use on that network. By providing just this mnemonic, we are able to unlock and generate the public key, private key and address of our account.
 const provider = new HDwalletProvider('will curious bright embody feed century second access stove already apart cloud', 'https://rinkeby.infura.io/v3/ecafb40453e845f2b3dde29801408ff3')
 const web3 = new Web3(provider)
 
